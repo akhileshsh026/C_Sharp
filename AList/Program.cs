@@ -34,11 +34,20 @@ namespace AList
 
     class Program
     {
+        
         static void Main(string[] args)
         {
             //HashTable();
-           // GenricCollections();
-           Using_MyGen_Class();
+            // GenricCollections();
+            // Using_MyGen_Class();
+
+            mynum<int> numm = new mynum<int>(Genric_Delegate.AddNum);
+            mynum<int> multi = new mynum<int>(Genric_Delegate.MulNum);
+            numm(1);
+            Console.WriteLine("Value of num: {0}",Genric_Delegate.getNum());
+            multi(2);
+            Console.WriteLine("Value of num:{1}",Genric_Delegate.getNum());
+
         }
 
         public static void ArrList_Show()
